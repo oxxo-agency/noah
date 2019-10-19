@@ -61,14 +61,18 @@ export default class SignIn extends React.Component {
 			.then((responseJson) => {
                 console.log(responseJson);
 
+                let d = new Date();
+                let day = d.getDay();
+
                 if(responseJson['data']['user']['status'] == '200') {
                     AsyncStorage.setItem('userPid', responseJson['data']['user']['user_pid']);
                     AsyncStorage.setItem('driverReport', responseJson['data']['report']);
+                    AsyncStorage.setItem('projectPid', responseJson['data']['project_pid']);
 
                     if(responseJson['data']['user']['new'] == '1') {
                         navigation.navigate('DriverNew');
                     } else {
-                        if(responseJson['data']['report'] == '1') {
+                        if(responseJson['data']['report'] == '1' || (day != 2 && day != 5)) {
                             navigation.navigate('SignedIn');
                         } else {
                             navigation.navigate('DriverReport');
