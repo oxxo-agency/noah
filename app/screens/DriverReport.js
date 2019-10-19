@@ -277,6 +277,34 @@ class DriverReportApp extends React.Component {
                             </Text>
                         </SafeAreaView>
                     </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={{
+                            alignItems: 'center',
+                            backgroundColor: '#e0e0e0'
+                        }}
+                        onPress={() => {
+                            AsyncStorage.removeItem('userPid');
+                            navigation.navigate('SignedOut');
+                        }}
+                    >
+                        <SafeAreaView
+                            style={{
+                                paddingVertical: 10,
+                            }}
+                        >
+                            <Text
+                                style={{
+                                    color: 'white',
+                                    fontWeight: 'bold',
+                                    letterSpacing: 2,
+                                    fontSize: 15
+                                }}
+                            >
+                                Kembali
+                            </Text>
+                        </SafeAreaView>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

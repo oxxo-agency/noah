@@ -37,7 +37,7 @@ export default class Home extends React.Component {
                     latitude: 0,
                     longitude: 0,
                 }
-            },      
+            },
             stopwatchStart: false,
             stopwatchReset: false,
         };

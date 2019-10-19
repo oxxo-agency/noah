@@ -9,7 +9,7 @@
       "android",
       "web"
     ],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -26,7 +26,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.noah.mitra",
-      "buildNumber": "1.0.2",
+      "buildNumber": "1.0.3",
       "infoPlist": {
         "UIBackgroundModes": [
           "location",
@@ -36,7 +36,7 @@
     },
     "android": {
       "package": "com.noah.mitra",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": [
         "CAMERA",
         "READ_EXTERNAL_STORAGE",

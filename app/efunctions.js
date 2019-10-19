@@ -38,6 +38,39 @@ export const validateEmail = (text) => {
 	}
 }
 
+export const encrypt2 = (data) => {
+	data = 92771499 + (data * 5);
+	return data;
+}
+
+export const parseOfferType = (data) => {
+	switch(data) {
+		case '1':
+			data = 'Rear Window';
+			break;
+		case '2':
+			data = 'Partial Back';
+			break;
+		case '3':
+			data = 'Panel + Rear Window';
+			break;
+		case '4':
+			data = 'Full Back';
+			break;
+		case '5':
+			data = 'Half Wrap';
+			break;
+		case '6':
+			data = 'Full Wrap';
+			break;
+		case '7':
+			data = 'Motor';
+			break;
+	}
+
+	return data;
+}
+
 export const parseReligion = (data) => {
 	switch(data) {
 		case '1':

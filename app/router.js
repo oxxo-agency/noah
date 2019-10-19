@@ -14,6 +14,9 @@ import SignUp from './screens/SignUp';
 import Home from './screens/Home';
 import Profile from './screens/Profile';
 import Settings from './screens/Settings';
+import History from './screens/History';
+import Inbox from './screens/Inbox';
+import Offer from './screens/Offer';
 
 import DriverReport from './screens/DriverReport';
 import DriverNew from './screens/DriverNew';
@@ -28,8 +31,23 @@ const SignedIn = createDrawerNavigator({
 	Profile: {
 		screen: Profile,
 	},
+	Offer: {
+		screen: Offer,
+		navigationOptions: {
+			drawerLabel: 'Penawaran'
+		}
+	},
+	Inbox: {
+		screen: Inbox,
+	},
 	History: {
-		screen: Home,
+		screen: History,
+	},
+	Contact: {
+		screen: History,
+		navigationOptions: {
+			drawerLabel: 'Hubungi Kami'
+		}
 	},
 	Settings: {
 		screen: Settings
